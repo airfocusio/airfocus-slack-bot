@@ -1,0 +1,24 @@
+{
+  "name": "airfocus-slack-bot",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint index.js src/",
+    "test": "npm run lint",
+    "docker-build": "docker build -t choffmeister/airfocus-slack-bot:latest .",
+    "docker-push": "npm run docker-build && docker push choffmeister/airfocus-slack-bot:latest"
+  },
+  "dependencies": {
+    "axios": "0.15.3",
+    "body-parser": "1.15.2",
+    "bunyan": "1.8.5",
+    "express": "4.14.0"
+  },
+  "devDependencies": {
+    "eslint": "3.11.1",
+    "eslint-config-standard": "6.2.1",
+    "eslint-plugin-promise": "3.4.0",
+    "eslint-plugin-standard": "2.0.1"
+  }
+}
